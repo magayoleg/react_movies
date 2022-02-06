@@ -7,7 +7,50 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+nav {
+  padding: 0 1rem;
+}
+
+.content {
+  min-height: calc(100vh - 70px - 64px);
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.card .card-content .card-title {
+  font-size: 1.2em;
+  line-height: 22px;
+}
+
+.card-content p {
+  font-size: 0.9em;
+}
+
+.preloader {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+}
+
+.search-form {
+  margin-bottom: 0;
+}
+
+.search-btn {
+  position: absolute;
+  top: 0;
+  right: 1rem
+}
+
+.filter-form {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem 20px 1rem;
 }
