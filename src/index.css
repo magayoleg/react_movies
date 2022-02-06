@@ -7,9 +7,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
 nav {
   padding: 0 1rem;
+}
+
+.hide-on-med-and-down a {
+  font-size: 1.5em;
 }
 
 .content {
@@ -22,6 +25,24 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1rem;
+}
+
+.movie {
+  position: relative;
+}
+
+.card .card-image {
+  max-height: 70%;
+  height: 100%;
+}
+
+.card .card-content {
+  max-height: 30%;
+  padding: 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card .card-content .card-title {
