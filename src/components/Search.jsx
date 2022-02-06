@@ -13,10 +13,12 @@ class Search extends Component {
   };
 
   handleFilter = (e) => {
-    this.setState(() => ({ filter: e.target.dataset.filter }), () => {
-      this.props.searchMovies(this.state.search, this.state.filter);
-    });
-
+    this.setState(
+      () => ({ filter: e.target.dataset.filter }),
+      () => {
+        this.props.searchMovies(this.state.search, this.state.filter);
+      }
+    );
   };
 
   render() {
