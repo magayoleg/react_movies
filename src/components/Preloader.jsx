@@ -1,6 +1,8 @@
+import style from './Preloader.module.sass';
+
 function Preloader() {
   return (
-    <div className="preloader-wrapper active preloader">
+    <div className={`preloader-wrapper active ${style.preloader}`}>
       <div className="spinner-layer spinner-green-only">
         <div className="circle-clipper left">
           <div className="circle"></div>

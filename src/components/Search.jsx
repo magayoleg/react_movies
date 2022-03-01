@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import style from './Search.module.sass';
 
 class Search extends Component {
   state = {
@@ -23,10 +24,10 @@ class Search extends Component {
 
   render() {
     return (
-      <div className="row search-form">
+      <div className={`row ${style['search-form']}`}>
         <div className="input-field col s12">
           <input
-            className="validate"
+            className={`${style.validate}`}
             placeholder="search"
             id="email"
             type="search"
@@ -35,7 +36,7 @@ class Search extends Component {
             onKeyDown={this.searchValue}
           />
           <button
-            className="btn search-btn"
+            className={`btn ${style['search-btn']}`}
             onClick={() =>
               this.props.searchMovies(this.state.search, this.state.filter)
             }
@@ -43,7 +44,7 @@ class Search extends Component {
             Search
           </button>
         </div>
-        <div className="filter-form">
+        <div className={`${style['filter-form']}`}>
           <label>
             <input
               onChange={this.handleFilter}

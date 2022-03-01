@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { Movies } from '../components/Movies';
 import { Preloader } from '../components/Preloader';
 import { Search } from '../components/Search';
+import style from './Main.module.sass';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
@@ -42,7 +43,7 @@ class Main extends Component {
   render() {
     const { movies, loading } = this.state;
     return (
-      <main className="container content">
+      <main className={`container ${style.content}`}>
         <Search searchMovies={this.searchMovies} />
         {loading ? <Preloader /> : <Movies movies={movies} />}
       </main>
